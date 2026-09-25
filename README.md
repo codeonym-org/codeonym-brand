@@ -53,7 +53,7 @@ source/    build_logo.py, which generates everything in svg/ except the banner
 - **Agent graph:** user → supervisor → MCP tools, memory, sub-agents, evals → AG-UI.
 - **Headline:** "AI agents that level up."
 - **Loadout:** LangChain, LangGraph, CopilotKit, AG-UI, MCP, Next.js, TypeScript, Python.
-- **XP bar:** your level, a bar toward the next rank, and the portfolio link.
+- **XP bar:** my level, a bar toward the next rank, and the portfolio link.
 
 The bottom-left is kept empty because LinkedIn places the profile photo there. Edit the text and stack at the top of `source/build_banner.py`.
 
