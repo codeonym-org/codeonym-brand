@@ -40,9 +40,24 @@ svg/       masters (pure paths, no fonts needed)
            × color-dark (on dark) · color-light (on light) · black · white
            *-bg.svg = with background baked in (previews, social)
            favicon.svg = simplified mark for ≤ 48 px
+           linkedin-banner.svg = 1584×396 LinkedIn banner
 export/    PNG 512/1024/2048 + PDF per master, optimized copies, icons/ (favicon.ico, PWA, apple-touch)
-source/    build_logo.py, which generates everything in svg/
+source/    build_logo.py, which generates everything in svg/ except the banner
+           build_banner.py, the LinkedIn banner (imports build_logo.py)
+           icons/, stack icons used by the banner
 ```
+
+## LinkedIn banner
+
+`export/linkedin-banner-1584x396.png` is the upload size, and `-3168x792.png` is the 2× version for sharp screens. The banner reads left to right:
+- **Agent graph:** user → supervisor → MCP tools, memory, sub-agents, evals → AG-UI.
+- **Headline:** "AI agents that level up."
+- **Loadout:** LangChain, LangGraph, CopilotKit, AG-UI, MCP, Next.js, TypeScript, Python.
+- **XP bar:** your level, a bar toward the next rank, and the portfolio link.
+
+The bottom-left is kept empty because LinkedIn places the profile photo there. Edit the text and stack at the top of `source/build_banner.py`.
+
+Stack icons come from [Simple Icons](https://simpleicons.org) (CC0), and the CopilotKit mark from the [CopilotKit repo](https://github.com/CopilotKit/CopilotKit) (MIT). They're shown only to name the tools I use. The trademarks belong to their owners.
 
 ## Rules
 
